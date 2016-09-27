@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
 
 import { SplashComponent } from './splash.component';
-import { routing } from './splash.routing';
+
+const routes: Routes = [
+    { path: '', component: SplashComponent }
+];
 
 @NgModule({
     imports: [
         CommonModule,
-        routing
+        RouterModule.forChild(routes)
     ],
     declarations: [
         SplashComponent
